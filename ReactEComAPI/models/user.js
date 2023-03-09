@@ -10,24 +10,24 @@ var validateEmail = function(email) {
 const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
-        required: true
+        // required: 'FirstName is required'
     },
     lastName: {
         type: String,
-        required: true
+        // required: 'LastName is required'
     },
     email: {
         type: String,
-        trim: true,
-        lowercase: true,
-        unique: true,
-        required: 'Email address is required',
-        validate: [validateEmail, 'Please fill a valid email address'],
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+        // trim: true,
+        // lowercase: true,
+        // // unique: true,
+        // required: 'Email is required',
+        // // validate: [validateEmail, 'Please fill a valid email address'],
+        // match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
     },
     password: {
         type: String,
-        required: true
+        // required: 'Password is required'
     },
     date: {
         type: Date,
